@@ -14,6 +14,6 @@ app.use('/', routes)
 //static files
 
 
-app.listen(4000, ()=>{
+app.listen(process.env.PORT || 4000, ()=>{
     console.log('server on port 4000');
 })
