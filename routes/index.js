@@ -10,9 +10,7 @@ const compras = require('./Compras.route')
 const ventas = require('./ventas.route')
 const Roles = require('./rol.route')
 const Caja = require('./caja.route')
-
-
-
+const estatus = require('./status.route')
 
 //routes
 router.use('/usuarios', usuarios);
@@ -23,6 +21,7 @@ router.use('/compras', compras);
 router.use('/ventas', ventas);
 router.use('/roles', Roles);
 router.use('/caja', Caja);
+router.use('/status', estatus);
 
 
 module.exports = router
