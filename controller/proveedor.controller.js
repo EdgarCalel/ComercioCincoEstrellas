@@ -11,11 +11,11 @@ try {
 }
 
 const createProveedor = async (req, res)=>{
-    const {nombre, apellido, direccion, nit, telefono} =req.body
+    const {nombre, direccion, nit, telefono} =req.body
     try {
         const create = await sequelize.query(`
-        insert into proveedor ( nombre, apellido, direccion, nit, telefono)
-        values ('${nombre}','${apellido}','${direccion}','${nit}','${telefono}')`, { type: QueryTypes.SELECT });
+        insert into proveedor ( nombre,  direccion, nit, telefono)
+        values ('${nombre}','${direccion}','${nit}','${telefono}')`, { type: QueryTypes.SELECT });
         res.status(200).json({data: create})
     } catch (error) {
         console.error(error)
