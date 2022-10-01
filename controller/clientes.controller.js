@@ -4,7 +4,8 @@ const {sequelize} = require('../db/bd');
 const clientes = async (req, res)=>{
 try {
     const datos = await sequelize.query(`SELECT * FROM clientes`, { type: QueryTypes.SELECT });
-    res.status(200).json({data: datos})
+    res.json("no se encuentra data")
+    // res.status(200).json({data: datos})
 } catch (error) {
     console.log(error)
 }
