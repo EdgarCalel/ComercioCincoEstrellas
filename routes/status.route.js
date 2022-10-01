@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 //importaciones
-const {status } = require('../controller/status.controller')
+const {status } = require('../controller//status.controller')
 
 //routes
 router.get('/', status);
