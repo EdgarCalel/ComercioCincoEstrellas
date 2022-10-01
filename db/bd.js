@@ -1,4 +1,8 @@
 const  {Sequelize}  = require('sequelize');
-const sequelize = new Sequelize(process.env.DATABASE_URL)
+const {
+  DATABASE_URL
+}= process.env;
+
+const sequelize = new Sequelize(`${DATABASE_URL}`)
 
 module.exports = {sequelize}
