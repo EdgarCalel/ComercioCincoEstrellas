@@ -1,4 +1,9 @@
 const  {Sequelize}  = require('sequelize');
-const sequelize = new Sequelize('postgres://edgar:emiliano1707@localhost:5432/comercio')
+require('dotenv').config();
+const {
+  DATABASE_URL
+}= process.env;
+
+const sequelize = new Sequelize(`${DATABASE_URL}`)
 
 module.exports = {sequelize}
